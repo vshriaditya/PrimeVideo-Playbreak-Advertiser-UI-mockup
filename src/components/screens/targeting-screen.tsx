@@ -24,7 +24,7 @@ export function TargetingScreen() {
         <div className="stack">
           <SectionCard
             title="Audience targeting"
-            description="Use a mix of realistic Amazon audience segments for the demo."
+            description="Use a realistic mix of Amazon shopping and streaming audience segments for the demo."
           >
             <div className="selection-grid">
               {audienceCatalog.map((segment) => {
@@ -45,8 +45,8 @@ export function TargetingScreen() {
           </SectionCard>
 
           <SectionCard
-            title="Geography and device"
-            description="Keep delivery scoped to approved Fire TV inventory."
+            title="Geography and surface"
+            description="Keep delivery scoped to approved Prime Video inventory."
           >
             <div className="form-grid form-grid-three">
               <Field label="Geography">
@@ -59,14 +59,15 @@ export function TargetingScreen() {
                   <option>North America</option>
                 </select>
               </Field>
-              <Field label="Device">
+              <Field label="Surface">
                 <select
                   value={campaign.device}
                   onChange={(event) => setField("device", event.target.value)}
                 >
-                  <option>All Fire TV devices</option>
-                  <option>Fire TV Stick + Cube</option>
-                  <option>Fire TV smart TVs only</option>
+                  <option>Prime Video pause ads only</option>
+                  <option>Prime Video on living room devices</option>
+                  <option>Prime Video branded break moments</option>
+                  <option>Prime Video live sports placements</option>
                 </select>
               </Field>
               <Field label="Flight window">
@@ -128,7 +129,7 @@ export function TargetingScreen() {
                 <strong>$0.48 - $0.62</strong>
               </div>
               <div>
-                <span>Forecasted reward redemptions</span>
+                <span>Forecasted reward claims</span>
                 <strong>4.1K - 5.0K</strong>
               </div>
             </div>

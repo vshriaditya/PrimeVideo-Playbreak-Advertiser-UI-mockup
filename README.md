@@ -1,6 +1,6 @@
-# Fire TV Playbreak Console
+# Prime Video Playbreak Console
 
-A product prototype for an advertiser-facing console that makes interactive Fire TV campaigns easier to plan, launch, and measure.
+A product prototype for an advertiser-facing console that makes interactive Prime Video campaigns easier to plan, launch, and measure.
 
 The focus of this project is the product itself: the buyer problem, the workflow needed to solve it, and the operational and measurement details required to make the idea usable.
 
@@ -8,11 +8,11 @@ The focus of this project is the product itself: the buyer problem, the workflow
 
 ## What This Project Is
 
-`firetv-playbreak-console` is a prototype console for a hypothetical Amazon Ads / Fire TV offering called **Playbreak**.
+`prime-video-playbreak-console` is a prototype console for a hypothetical Amazon Ads / Prime Video offering called **Playbreak**.
 
 The concept:
 
-- Advertisers can launch lightweight interactive ad moments on Fire TV.
+- Advertisers can launch lightweight interactive ad moments on Prime Video.
 - Campaigns can include formats like quick trivia, multiple-choice prompts, and reward-driven interactions.
 - Buyers can move from setup to reporting in one connected flow instead of stitching together separate planning, trafficking, and measurement experiences.
 
@@ -102,7 +102,7 @@ Users can then configure:
 
 - audience segments
 - geography
-- device scope
+- Prime Video surface scope
 - flight window
 - bid model
 - total and daily budgets
@@ -133,7 +133,7 @@ This repo is useful for:
 - designers shaping internal tool and console workflows
 - engineers scoping what a first version of the platform might require
 - GTM and ads stakeholders who need to react to something concrete
-- teams exploring interactive ad product concepts
+- teams exploring interactive Prime Video ad product concepts
 
 ## Tech Stack
 
@@ -154,4 +154,4 @@ Then open `http://localhost:3000`.
 
 - This is a prototype, not a production advertising platform.
 - The reporting and campaign data are realistic mock data intended for product storytelling and stakeholder review.
-- The main value of the repo is the product framing and workflow design, not backend integration depth.
+- The main value of the repo is the product framing and workflow design for Prime Video ad surfaces, not backend integration depth.

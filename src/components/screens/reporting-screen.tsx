@@ -67,7 +67,7 @@ export function ReportingScreen() {
           <div className="section-heading">
             <div>
               <h3>Trendline snapshot</h3>
-              <p>Weekly progression across completion, engagement, and attributed conversion signal.</p>
+              <p>Weekly progression across pause completion, engagement, and resume-to-content rate.</p>
             </div>
           </div>
           <div className="chart-list">
@@ -82,7 +82,7 @@ export function ReportingScreen() {
                     <small>Engagement {week.engagement}%</small>
                   </div>
                   <div className="conversion" style={{ width: `${week.conversions}%` }}>
-                    <small>Conversion {week.conversions}%</small>
+                    <small>Resume {week.conversions}%</small>
                   </div>
                 </div>
               </div>
@@ -106,10 +106,10 @@ export function ReportingScreen() {
             <div>
               <span>Message association</span>
               <strong>+14.3%</strong>
-              <small>Reward-based response panel</small>
+              <small>Pause-ad response panel</small>
             </div>
             <div>
-              <span>Purchase intent</span>
+              <span>Rental or purchase intent</span>
               <strong>+11.2%</strong>
               <small>Modeled lift among engaged viewers</small>
             </div>
@@ -122,7 +122,7 @@ export function ReportingScreen() {
           <div className="section-heading">
             <div>
               <h3>Audience segment performance</h3>
-              <p>Dummy data aligned to the selected audience strategy.</p>
+              <p>Illustrative data aligned to the selected Prime Video audience strategy.</p>
             </div>
           </div>
           <div className="table-shell">
@@ -147,7 +147,7 @@ export function ReportingScreen() {
           <div className="section-heading">
             <div>
               <h3>Attribution funnel</h3>
-              <p>Closed-loop view from exposure through redemption and purchase.</p>
+              <p>Closed-loop view from exposure through reward claim and downstream intent.</p>
             </div>
           </div>
           <div className="funnel">
@@ -160,11 +160,11 @@ export function ReportingScreen() {
               <strong>791K</strong>
             </div>
             <div>
-              <span>Reward redemptions</span>
+              <span>Reward claims</span>
               <strong>4,812</strong>
             </div>
             <div>
-              <span>Attributed purchases</span>
+              <span>Downstream attributed actions</span>
               <strong>3,240</strong>
             </div>
           </div>

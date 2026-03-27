@@ -6,9 +6,9 @@ import { useCampaign } from "@/components/campaign-provider";
 import { Field, SectionCard } from "@/components/form-controls";
 
 const rewardTypes = [
-  "Amazon.com Gift Card",
   "Prime Video Credit",
   "Brand Coupon",
+  "Early Access Unlock",
 ] as const;
 
 export function BuilderScreen() {
@@ -18,7 +18,7 @@ export function BuilderScreen() {
     <ConsoleShell
       activeStep="builder"
       title="Build your Playbreak campaign"
-      description="Configure campaign metadata, interaction design, reward logic, and a branded creative preview."
+      description="Configure campaign metadata, interaction design, reward logic, and a Prime Video pause-ad preview."
       actions={
         <Link className="button button-primary" href="/targeting">
           Continue to targeting
@@ -44,7 +44,7 @@ export function BuilderScreen() {
                   onChange={(event) => setField("brandName", event.target.value)}
                 />
               </Field>
-              <Field label="Creative headline" hint="Shown in preview and review summaries">
+              <Field label="Creative headline" hint="Shown above the interaction in review summaries">
                 <input
                   value={campaign.creativeHeadline}
                   onChange={(event) => setField("creativeHeadline", event.target.value)}
@@ -94,7 +94,7 @@ export function BuilderScreen() {
 
           <SectionCard
             title="Reward and brand styling"
-            description="Set the value exchange and adjust the branded visual treatment."
+            description="Set the viewer reward and the branded visual treatment for the pause ad."
           >
             <div className="form-grid form-grid-three">
               <Field label="Reward type">
@@ -128,22 +128,51 @@ export function BuilderScreen() {
 
         <aside className="preview-card">
           <div className="preview-shell">
-            <div className="preview-topline">
-              <span>{campaign.brandName}</span>
+            <div className="preview-frame-top">
+              <span>Sponsored pause ad</span>
               <small>{campaign.format}</small>
             </div>
-            <div
-              className="preview-banner"
-              style={{
-                background: `linear-gradient(135deg, ${campaign.brandColor}, #142033)`,
-              }}
-            >
-              <p>Reward unlocked</p>
-              <strong>{campaign.rewardValue}</strong>
-              <span>{campaign.rewardType}</span>
+            <div className="preview-shell-inner">
+              <div className="preview-header-row">
+                <h3>Playbreak</h3>
+                <div className="preview-icon">
+                  <span>OK</span>
+                </div>
+              </div>
+              <div className="preview-divider" />
+              <div className="preview-brand-row">
+                <div className="preview-brand-lockup">
+                  <div
+                    className="preview-brand-chip"
+                    style={{ background: campaign.brandColor }}
+                  >
+                    {campaign.brandName.slice(0, 1)}
+                  </div>
+                  <strong>{campaign.brandName}</strong>
+                </div>
+                <span className="preview-timer">10 seconds</span>
+              </div>
+              <p className="preview-question">{campaign.question}</p>
+              <p className="preview-copy">
+                Answer with your remote before playback resumes. Correct answers unlock a {campaign.rewardType.toLowerCase()} instantly.
+              </p>
+              <div className="preview-bottom-row">
+                <div>
+                  <span className="preview-kicker">Viewer reward</span>
+                  <strong className="preview-reward">
+                    {campaign.rewardValue} {campaign.rewardType}
+                  </strong>
+                </div>
+                <div
+                  className="preview-cta"
+                  style={{
+                    background: `linear-gradient(180deg, #37b7ff 0%, #178ce9 100%)`,
+                  }}
+                >
+                  Press OK to play
+                </div>
+              </div>
             </div>
-            <h3>{campaign.creativeHeadline}</h3>
-            <p>{campaign.question}</p>
             <div className="preview-options">
               {campaign.answerOptions.map((option, index) => (
                 <div
@@ -156,8 +185,8 @@ export function BuilderScreen() {
               ))}
             </div>
             <div className="preview-footer">
-              <span>Fire TV native unit preview</span>
-              <small>Desktop console approximation</small>
+              <span>Prime Video pause ad preview</span>
+              <small>Living room layout approximation</small>
             </div>
           </div>
 

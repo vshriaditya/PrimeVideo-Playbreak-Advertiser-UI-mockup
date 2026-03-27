@@ -1,11 +1,11 @@
 :root {
-  --bg: #07111f;
-  --bg-accent: #0b1d33;
-  --surface: rgba(10, 25, 43, 0.82);
-  --surface-strong: rgba(15, 32, 54, 0.96);
-  --surface-border: rgba(88, 176, 255, 0.16);
-  --text: #d9e7f7;
-  --text-muted: #8ea8c5;
+  --bg: #07101a;
+  --bg-accent: #0a1a2d;
+  --surface: rgba(12, 23, 38, 0.84);
+  --surface-strong: rgba(15, 28, 45, 0.98);
+  --surface-border: rgba(95, 176, 255, 0.14);
+  --text: #dbe7f5;
+  --text-muted: #90a8c1;
   --heading: #f5f9ff;
   --brand: #1ec8ff;
   --brand-strong: #0ea5e9;
@@ -37,7 +37,7 @@ body {
     radial-gradient(circle at 80% 0%, rgba(255, 153, 0, 0.12), transparent 18%),
     radial-gradient(circle at 50% 100%, rgba(19, 91, 184, 0.18), transparent 30%),
     linear-gradient(180deg, #091321 0%, #08111d 48%, #060d18 100%);
-  font-family: "Avenir Next", "Segoe UI Variable", "Segoe UI", sans-serif;
+  font-family: "Amazon Ember", "Avenir Next", "Segoe UI Variable", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -101,7 +101,7 @@ textarea {
   top: 0;
   align-self: start;
   min-height: 100vh;
-  padding: 2rem 1.25rem;
+  padding: 2rem 1.35rem;
   background:
     linear-gradient(180deg, rgba(5, 13, 25, 0.98) 0%, rgba(6, 11, 20, 1) 100%);
   color: rgba(255, 255, 255, 0.92);
@@ -110,7 +110,7 @@ textarea {
 
 .brand-lockup {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.85rem;
   margin-bottom: 2rem;
 }
@@ -126,7 +126,14 @@ textarea {
   font-weight: 700;
   text-transform: lowercase;
   letter-spacing: 0.03em;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.brand-subtitle {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.84rem;
 }
 
 .brand-overline,
@@ -222,7 +229,7 @@ textarea {
 }
 
 .console-main {
-  padding: 2rem;
+  padding: 2rem 2rem 2.5rem;
 }
 
 .console-header {
@@ -285,9 +292,9 @@ textarea {
 }
 
 .button-primary {
-  background: linear-gradient(180deg, #ffad33, var(--accent));
-  color: #112038;
-  box-shadow: 0 14px 28px rgba(255, 153, 0, 0.22);
+  background: linear-gradient(180deg, #37b7ff, #198ce9);
+  color: #f7fbff;
+  box-shadow: 0 14px 28px rgba(24, 140, 233, 0.24);
 }
 
 .button-secondary {
@@ -333,6 +340,25 @@ textarea {
   background: var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
+}
+
+.hero-panel,
+.surface-card,
+.preview-card,
+.format-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::before,
+.surface-card::before,
+.preview-card::before,
+.format-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(30, 200, 255, 0.07), transparent 28%);
+  pointer-events: none;
 }
 
 .hero-panel {
@@ -590,36 +616,149 @@ textarea {
 }
 
 .preview-shell {
-  padding: 1.2rem;
-  border-radius: 22px;
+  padding: 1.15rem;
+  border-radius: 24px;
   background:
-    radial-gradient(circle at top right, rgba(30, 200, 255, 0.14), transparent 26%),
-    linear-gradient(180deg, #0a1628 0%, #11233d 100%);
+    radial-gradient(circle at top right, rgba(30, 200, 255, 0.12), transparent 26%),
+    linear-gradient(180deg, #121b2a 0%, #09111d 100%);
   color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(88, 176, 255, 0.14);
 }
 
-.preview-topline span,
-.preview-topline small {
-  color: rgba(255, 255, 255, 0.76);
+.preview-frame-top,
+.preview-header-row,
+.preview-brand-row,
+.preview-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.preview-banner {
-  margin: 1rem 0 1.1rem;
-  padding: 1rem;
-  border-radius: 18px;
+.preview-frame-top span,
+.preview-frame-top small {
+  color: rgba(255, 255, 255, 0.72);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.76rem;
+}
+
+.preview-shell-inner {
+  margin-top: 0.9rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(23, 31, 46, 0.98), rgba(9, 15, 27, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.preview-header-row {
+  padding: 1.6rem 1.7rem 1.4rem;
+}
+
+.preview-header-row h3 {
   color: #fff;
+  font-size: 2.1rem;
+  font-weight: 760;
+  letter-spacing: -0.04em;
 }
 
-.preview-banner strong {
+.preview-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: #f7fbff;
+  color: #0a1628;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.preview-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.preview-brand-row {
+  padding: 1.5rem 1.7rem 0;
+  align-items: center;
+}
+
+.preview-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.preview-brand-chip {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+}
+
+.preview-brand-lockup strong {
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+}
+
+.preview-timer {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.88rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.preview-question {
+  padding: 1.35rem 1.7rem 0;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  font-weight: 760;
+}
+
+.preview-copy {
+  padding: 0.95rem 1.7rem 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 1rem;
+}
+
+.preview-bottom-row {
+  align-items: flex-end;
+  padding: 1.5rem 1.7rem 1.7rem;
+}
+
+.preview-kicker {
   display: block;
-  font-size: 2rem;
-  margin: 0.15rem 0;
+  color: rgba(255, 255, 255, 0.42);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  margin-bottom: 0.5rem;
 }
 
-.preview-shell h3 {
+.preview-reward {
+  color: #61dd83;
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.preview-cta {
+  padding: 0.95rem 1.25rem;
+  border-radius: 999px;
   color: #fff;
-  margin-bottom: 0.6rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(24, 140, 233, 0.22);
 }
 
 .preview-options {

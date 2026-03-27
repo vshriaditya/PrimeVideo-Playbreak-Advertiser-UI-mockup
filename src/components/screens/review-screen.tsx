@@ -108,9 +108,32 @@ export function ReviewScreen() {
             <div className="launch-timing">
               <strong>Live within 48 hours</strong>
               <p>
-                Campaign will appear in supported Fire TV placements after approval,
+                Campaign will appear in supported Prime Video placements after approval,
                 reward provisioning, and QA validation.
               </p>
+            </div>
+          </section>
+
+          <section className="surface-card">
+            <div className="section-heading">
+              <div>
+                <h3>Prime Video-specific safeguards</h3>
+                <p>Playback-safe constraints included in the launch package.</p>
+              </div>
+            </div>
+            <div className="checklist">
+              <div className="checklist-item">
+                <span>✓</span>
+                <p>Interaction length capped at 10 seconds</p>
+              </div>
+              <div className="checklist-item">
+                <span>✓</span>
+                <p>Reward exchange approved for pause-ad surfaces</p>
+              </div>
+              <div className="checklist-item">
+                <span>✓</span>
+                <p>Viewer returns directly to content after completion</p>
+              </div>
             </div>
           </section>
 

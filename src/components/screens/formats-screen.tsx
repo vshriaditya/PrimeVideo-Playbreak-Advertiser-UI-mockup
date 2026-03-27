@@ -12,7 +12,7 @@ export function FormatsScreen() {
     <ConsoleShell
       activeStep="formats"
       title="Select a Playbreak format"
-      description="Choose the interaction format that best matches campaign goals, timing, and creative depth."
+      description="Choose the interaction format that best matches Prime Video surface context, timing, and creative depth."
       actions={
         <Link className="button button-primary" href="/builder">
           Continue to builder
@@ -58,7 +58,7 @@ export function FormatsScreen() {
           <h3>{campaign.format}</h3>
           <p>
             The current demo defaults to <strong>{campaign.format}</strong>, optimized for
-            multiple-choice engagement with a reward exchange.
+            a reward-driven pause ad that viewers can complete before resuming playback.
           </p>
         </div>
         <div className="inline-actions">

@@ -42,29 +42,29 @@ export const formatOptions = [
     id: "QuickVoice",
     label: "QuickVoice",
     duration: "6-8 sec interaction",
-    fit: "Voice-led recall and product education",
+    fit: "Voice-led recall for pause and branded break moments",
     summary:
-      "Prompt viewers with a short spoken question and a one-tap answer moment optimized for lean-back attention.",
-    strengths: ["Fast launch", "Voice-first", "High completion"],
-    kpi: "Completion rate 92%",
+      "Prompt viewers with a short spoken question and a lightweight answer flow optimized for lean-back viewing moments.",
+    strengths: ["Fast launch", "Voice first", "High completion"],
+    kpi: "Pause completion 92%",
   },
   {
     id: "SpeedPick",
     label: "SpeedPick",
     duration: "10-12 sec interaction",
-    fit: "Selection-based offer and preference testing",
+    fit: "Selection-based pause ad with reward exchange",
     summary:
-      "Drive quick response with multiple answer choices, dynamic reward copy, and a stronger value exchange.",
-    strengths: ["Choice-based", "Reward ready", "Strong engagement"],
-    kpi: "Engagement lift 2.4x",
+      "Drive quick response with multiple answer choices, dynamic reward copy, and a clear reason to engage before playback resumes.",
+    strengths: ["Choice based", "Reward ready", "Strong engagement"],
+    kpi: "Resume-safe engagement 2.4x",
   },
   {
     id: "RevealIt",
     label: "RevealIt",
     duration: "12-15 sec interaction",
-    fit: "Trivia and product reveal with richer visual payoff",
+    fit: "Premium reveal for launches, tentpoles, and sports sponsorships",
     summary:
-      "Use a richer branded reveal moment to reinforce product imagery, reward messaging, and recall.",
+      "Use a richer branded reveal moment to reinforce product imagery, reward messaging, and premium recall.",
     strengths: ["Visual reveal", "Premium feel", "Brand recall"],
     kpi: "Brand lift +41%",
   },
@@ -72,33 +72,33 @@ export const formatOptions = [
 
 export const defaultCampaign = {
   campaignName: "Playbreak Spring Launch",
-  brandName: "Cascade Sparkling Water",
+  brandName: "Toyota",
   format: "SpeedPick",
-  question: "Which Cascade flavor should shoppers unlock next for game night?",
-  answerOptions: ["Lime Zest", "Berry Peach", "Blood Orange", "Crisp Grapefruit"],
-  correctAnswer: 2,
-  rewardType: "Amazon.com Gift Card",
+  question: "Which Toyota SUV was rated America's Most Loved in 2025?",
+  answerOptions: ["RAV4", "Highlander", "4Runner", "Tacoma"],
+  correctAnswer: 0,
+  rewardType: "Prime Video Credit",
   rewardValue: "$3.00",
-  brandColor: "#FF9900",
-  creativeHeadline: "Choose the next fan-favorite flavor.",
-  audienceSegments: ["In-market grocery", "Streaming families", "Prime deal seekers"],
+  brandColor: "#FF1F29",
+  creativeHeadline: "Play before your show resumes.",
+  audienceSegments: ["In-market auto", "Streaming households", "Prime Video regulars"],
   geography: "United States",
-  device: "All Fire TV devices",
+  device: "Prime Video pause ads",
   bidModel: "CPE",
-  totalBudget: "$50,000",
-  dailyBudget: "$7,500",
+  totalBudget: "$125,000",
+  dailyBudget: "$18,000",
   flightWindow: "Apr 15 - Apr 28",
-  audienceEstimate: "12.8M reachable households",
+  audienceEstimate: "18.4M reachable viewers",
   launchStatus: "Draft",
   launchDate: "",
 };
 
 export const audienceCatalog = [
-  "In-market grocery",
-  "Streaming families",
-  "Prime deal seekers",
-  "Health-conscious shoppers",
+  "In-market auto",
+  "Streaming households",
+  "Prime Video regulars",
   "Sports & live TV viewers",
+  "Action & thriller fans",
   "Household decision makers",
 ];
 
@@ -106,12 +106,17 @@ export const overviewHighlights = [
   {
     label: "Time to launch",
     value: "48 hours",
-    detail: "From console setup to live Fire TV campaign",
+    detail: "From console setup to live Prime Video pause ad campaign",
   },
   {
     label: "Buy model",
     value: "CPE",
-    detail: "Pay when customers actively engage",
+    detail: "Pay when viewers actively engage before resume",
+  },
+  {
+    label: "Primary surface",
+    value: "Pause ads",
+    detail: "Built for voluntary Prime Video break moments",
   },
   {
     label: "Audience signal",
@@ -121,31 +126,32 @@ export const overviewHighlights = [
 ];
 
 export const measurementCards = [
-  { label: "Completion rate", value: "94.2%", delta: "+6.1 pts vs. benchmark" },
-  { label: "Engagement rate", value: "71.8%", delta: "+2.4x interaction rate" },
-  { label: "Reward redemption", value: "38.4%", delta: "4,812 claimed rewards" },
-  { label: "Attributed conversions", value: "3,240", delta: "14-day Amazon purchase window" },
+  { label: "Pause ad completion", value: "94.2%", delta: "+6.1 pts vs. benchmark" },
+  { label: "Viewer engagement", value: "71.8%", delta: "+2.4x interaction rate" },
+  { label: "Reward claim rate", value: "38.4%", delta: "4,812 claimed credits" },
+  { label: "Resume-to-content rate", value: "97.1%", delta: "Minimal playback disruption" },
   { label: "Brand recall lift", value: "+18.6%", delta: "Exposed vs. control survey panel" },
-  { label: "Purchase intent lift", value: "+11.2%", delta: "Brand lift modeled signal" },
+  { label: "Downstream lift", value: "+11.2%", delta: "Modeled rental or purchase intent lift" },
 ];
 
 export const weeklyPerformance = [
-  { label: "Week 1", completion: 82, engagement: 61, conversions: 34 },
-  { label: "Week 2", completion: 88, engagement: 66, conversions: 42 },
-  { label: "Week 3", completion: 91, engagement: 72, conversions: 59 },
-  { label: "Week 4", completion: 94, engagement: 76, conversions: 68 },
+  { label: "Week 1", completion: 82, engagement: 61, conversions: 84 },
+  { label: "Week 2", completion: 88, engagement: 66, conversions: 89 },
+  { label: "Week 3", completion: 91, engagement: 72, conversions: 93 },
+  { label: "Week 4", completion: 94, engagement: 76, conversions: 97 },
 ];
 
 export const segmentPerformance = [
-  { segment: "Prime deal seekers", engagement: "79%", cvr: "4.8%", roas: "3.9x" },
-  { segment: "Streaming families", engagement: "74%", cvr: "4.2%", roas: "3.4x" },
-  { segment: "In-market grocery", engagement: "71%", cvr: "5.1%", roas: "4.1x" },
-  { segment: "Sports & live TV viewers", engagement: "66%", cvr: "3.7%", roas: "2.9x" },
+  { segment: "In-market auto", engagement: "79%", cvr: "5.3%", roas: "4.4x" },
+  { segment: "Prime Video regulars", engagement: "74%", cvr: "4.6%", roas: "3.8x" },
+  { segment: "Streaming households", engagement: "71%", cvr: "4.1%", roas: "3.3x" },
+  { segment: "Sports & live TV viewers", engagement: "66%", cvr: "3.9%", roas: "3.0x" },
 ];
 
 export const launchChecklist = [
-  "Creative follows Playbreak interaction guidelines",
-  "Reward inventory and value are approved",
-  "Targeting, geography, and device scope are aligned",
+  "Creative follows Playbreak pause-ad interaction guidelines",
+  "Reward inventory, fulfillment, and policy approval are complete",
+  "Targeting, geography, and Prime Video surface scope are aligned",
+  "Playback-safe QA passed across living room surfaces",
   "Budget and CPE caps are within account policy",
 ];

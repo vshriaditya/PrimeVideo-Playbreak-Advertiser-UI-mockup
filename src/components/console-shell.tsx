@@ -23,10 +23,11 @@ export function ConsoleShell({
     <div className="console">
       <aside className="console-sidebar">
         <div className="brand-lockup">
-          <div className="brand-mark">ads</div>
+          <div className="brand-mark">pv</div>
           <div>
             <p className="brand-overline">Amazon Ads</p>
             <h1>Playbreak Console</h1>
+            <span className="brand-subtitle">Prime Video interactive formats</span>
           </div>
         </div>
 
@@ -52,7 +53,7 @@ export function ConsoleShell({
         <div className="sidebar-card">
           <p className="sidebar-label">Playbreak value</p>
           <ul>
-            <li>Interactive ad formats native to Fire TV content moments</li>
+            <li>Interactive ad formats native to Prime Video pause and break moments</li>
             <li>Amazon first-party audience targeting</li>
             <li>Closed-loop measurement across engagement and commerce</li>
           </ul>
@@ -62,7 +63,7 @@ export function ConsoleShell({
       <main className="console-main">
         <header className="console-header">
           <div>
-            <p className="page-eyebrow">Fire TV placements / Playbreak</p>
+            <p className="page-eyebrow">Prime Video placements / Playbreak</p>
             <h2>{title}</h2>
             <p className="page-description">{description}</p>
           </div>
